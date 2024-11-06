@@ -51,7 +51,7 @@ type Post = {
 interface HomeProps {
   posts: Post[];
 }
-
+//api calling function from json placeholder api
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   const posts: Post[] = await res.json();
